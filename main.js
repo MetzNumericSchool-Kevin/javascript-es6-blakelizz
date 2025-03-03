@@ -6,15 +6,9 @@
 // Exercice 1.1 : Transforme la concaténation en interpolation de chaîne de caractères avec les backticks `
 function afficheAddresse(address) {
   return (
-    "Votre adresse est : " +
-    address.street +
-    ", " +
-    address.city +
-    ", " +
-    address.country +
-    "."
+    `Votre adresse est : ${address.street} , ${address.city} , ${address.country} .`
   );
-}
+};
 
 console.log("Exercice 1.1");
 console.log(
@@ -27,9 +21,12 @@ console.log(
 
 // Exercice 1.2 : Utilise les chaînes multilignes avec les backticks ` pour afficher plus simplement le menu
 console.log("Exercice 1.2");
-console.log(
-  "Menu de la semaine :\n    - Pâte à tartine\n    - Hoagie\n    - Salade de pommes"
-);
+console.log(`
+    Menu de la semaine :
+      - Pâte à tartine
+        - Hoagie
+          - Salade de pommes
+`);
 
 /**
  * Exercice 2
@@ -39,17 +36,19 @@ console.log(
 const colors = ["Red", "Green", "Blue", "Yellow"];
 
 // Exercice 2.1 : Utilise la décomposition pour créer les constantes de couleurs plutôt que d'accéder aux indices
-const red = colors[0];
-const green = colors[1];
-const blue = colors[2];
-const yellow = colors[3];
+// const red = colors[0];
+// const green = colors[1];
+// const blue = colors[2];
+// const yellow = colors[3];
+
 
 console.log("Exercice 2.1");
 console.log(red, green, blue, yellow);
 
 // Exercice 2.2 : La même chose, mais en ignorant ici "Red" et "Yellow"
-const green2 = colors[1];
-const blue2 = colors[2];
+// const green2 = colors[1];
+// const blue2 = colors[2];
+
 
 console.log("Exercice 2.2");
 console.log(green2, blue2);
