@@ -107,16 +107,16 @@ console.log(
 
 // ------
 
-// let firstname = "John";
-// let lastname = "Doe";
+let firstname = "John";
+let lastname = "Doe";
 
 // Exercice 2.5 : Faites l'inversion du prénom et nom avec la décomposition
 // plutôt qu'avoir une variable temporaire
-// let temp = firstname;
-// firstname = lastname;
-// lastname = temp;
+let temp = firstname;
+firstname = lastname;
+lastname = temp;
 
-const [firstname, lastname] = temp;
+const [firstname1, lastname1] = temp;
 
 console.log("Exercice 2.5");
 console.log(firstname, lastname);
@@ -147,10 +147,12 @@ hello(person);
  */
 
 // Exercice 3.1 : Décompose le tableau colors pour ne garder dans le reste que les couleurs bleue et jaune
-const restOfColors = [];
+// const restOfColors = [];
 
-restOfColors.push(colors[2]);
-restOfColors.push(colors[3]);
+// restOfColors.push(colors[2]);
+// restOfColors.push(colors[3]);
+
+const [red3, blue3, ...restOfColors] = colors;
 
 console.log("Exercice 3.1");
 console.log(restOfColors);
@@ -163,6 +165,8 @@ roman2.title = roman.title;
 roman2.editor = roman.editor;
 roman2.tome = roman.tome;
 roman2.auteur = roman.auteur;
+ 
+//const {}
 
 console.log("Exercice 3.2");
 console.log(roman2);
@@ -177,8 +181,8 @@ console.log(Math.min(12, 13, 52, 68, 2, 23, 5));
 
 // Exercice 3.4 : Transforme cette fonction pour qu'elle puisse prendre
 // un nombre indéfini de paramètres car actuellement elle en prend que 3
-function min(a, b, c) {
-  return Math.min(a, b, c);
+function min(...numbers) {
+  return Math.min(...numbers);
 }
 
 console.log("Exercice 3.4");
